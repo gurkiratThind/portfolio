@@ -187,11 +187,17 @@
 			}
 		});
 
-	$(".word").fancybox({
-		'width': 600, // or whatever
-		'height': 320,
-		'type': 'iframe'
+	//dropdown
+	$('.drop').hide();
+	$('.wrap').on('mouseover', '.work', function () {
+		$('.drop').show();
 	});
+	if ($('.drop').on('mouseout') === true) {
+		$('.wrap').on('mouseout', '.work', function () {
+			$('.drop').hide();
+		});
+	}
+
 
 
 })(jQuery);
